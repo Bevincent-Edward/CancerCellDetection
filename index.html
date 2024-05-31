@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cancer Cell Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancer Cell Detection</h1>
+        <form action="/predict" method="post">
+            <label for="Clump">Clump:</label>
+            <input type="number" name="Clump" step="0.01" required><br>
+
+            <label for="UnifSize">UnifSize:</label>
+            <input type="number" name="UnifSize" step="0.01" required><br>
+
+            <label for="UnifShape">UnifShape:</label>
+            <input type="number" name="UnifShape" step="0.01" required><br>
+
+            <label for="MargAdh">MargAdh:</label>
+            <input type="number" name="MargAdh" step="0.01" required><br>
+
+            <label for="SingEpiSize">SingEpiSize:</label>
+            <input type="number" name="SingEpiSize" step="0.01" required><br>
+
+            <label for="BareNuc">BareNuc:</label>
+            <input type="number" name="BareNuc" step="0.01" required><br>
+
+            <label for="BlandChrom">BlandChrom:</label>
+            <input type="number" name="BlandChrom" step="0.01" required><br>
+
+            <label for="NormNucl">NormNucl:</label>
+            <input type="number" name="NormNucl" step="0.01" required><br>
+
+            <label for="Mit">Mit:</label>
+            <input type="number" name="Mit" step="0.01" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
